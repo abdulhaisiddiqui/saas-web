@@ -1,0 +1,2007 @@
+
+/* Fonts */
+:root {
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #2487ce; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/*** Reset Default Styles ***/
+body {
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/*** Ensure Container-Fluid Takes Full Width ***/
+.container-fluid {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*** Hero Section ***/
+.hero-header {
+  padding-top: 100px !important; /* Adjust for fixed navbar */
+  padding-bottom: 50px !important;
+  position: relative !important;
+  z-index: 10 !important; /* Higher z-index to bring content in front of gradients */
+  width: 100% !important; /* Ensure it takes the full width */
+}
+@media (max-width: 768px){
+
+  .hero-header .hero-content p {
+    color: #000000;
+    font-size: 1px !important;
+    font-weight: 100 !important;
+    width: 300px !important;
+    height: 90px !important;
+    line-height: 25px !important;
+    margin: 5% 0 !important;
+  }
+  .hero-header .hero-content h1{
+    font-size: 40px;
+    color: #000;
+    font-weight: 800;
+  }
+  
+/* .hero-header .btn-outline-primary {
+  padding: 10px 40px !important;
+  display: flex !important; 
+  align-items: center;
+  justify-content: center; 
+  gap: 8px;
+  font-weight: 100;
+  border: 2px solid #000 !important;
+  transition: 0s !important;
+  color: #000000;
+}
+
+.hero-header .btn-outline-primary i {
+  font-weight: 100;
+  font-size: 5px !important;
+  line-height: 1;
+} */
+ .hero-header .btn{
+  display: flex !important;
+  margin: 20px 0;
+  text-align: center !important;
+  padding: 10px 20px !important;
+  font-size: 10px;
+ }
+
+.hero-header .btn-outline-primary:hover {
+  border: 2px solid #54BD95 !important;
+  border-radius: 50px;
+  background-color: transparent;
+}
+/*** Person Image ***/
+.person-img {
+  position: relative;
+  width: 60%;
+  z-index: 4;
+}
+
+/*** Credit Card Image ***/
+.credit-card-img {
+  position: absolute !important;
+  bottom: 10% !important;
+  right: 5% !important;
+  width: 100px !important;
+  z-index: 5 !important;
+}
+
+/*** Floating Elements ***/
+.float-1 {
+  display: none;
+  position: absolute !important;
+  top: 35% !important;
+  left: 10% !important;
+  width: 40px !important;
+  z-index: 6 !important;
+}
+
+.float-2 {
+  position: absolute !important;
+  top: 5% !important;
+  right: 6% !important;
+  width: 40px !important;
+  z-index: 6 !important;
+}
+
+.float-3 {
+  position: absolute !important;
+  bottom: -6% !important;
+  right: 28% !important;
+  width: 40px !important;
+  z-index: 6 !important;
+}
+
+
+
+/*** Transaction Cards ***/
+.transaction-card {
+  position: absolute !important;
+  background-color: #fff !important;
+  padding: 15px 20px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 15px !important;
+  z-index: 7 !important;
+}
+
+.transaction-1 {
+  width: 180px !important;
+  top: 0% !important;
+  left: -5% !important;
+}
+.transaction-1 .transaction-text p{
+  font-size: 10px !important;
+}
+.transaction-1 .transaction-text span{
+  font-size: 15px !important;
+}
+
+.transaction-2 {
+  width: 100px !important;
+  height: 70px !important;
+  bottom: 20% !important;
+  left: 1% !important;
+}
+.transaction-2 .transaction-text p{
+  font-size: 10px !important;
+}
+.transaction-2 .transaction-text .payment span{
+  font-size: 15px !important;
+}
+.transaction-text .payment img {
+  border: none !important;
+  top: 0 !important;
+  padding: 0px 0px !important;
+}
+/*** Text Container ***/
+.transaction-text {
+  border-bottom: 2px solid #EEEEEE;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.transaction-text .payment {
+  display: flex;
+}
+
+.transaction-text .payment span {
+  font-weight: 300;
+}
+
+
+
+
+
+.transaction-card p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.transaction-card span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.send-btn {
+  background-color: #a9d1c2;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #8cc1a9;
+}
+
+/* Collab  */
+.collab h3 {
+  font-weight: 900 !important;
+  font-size: 25px !important;
+  color: #000000 !important;
+  z-index: 10 !important;
+  text-align: center !important; /* Center the heading text */
+  margin-bottom: 30px !important; /* Add some space below the heading */
+}
+
+/* Rating section */
+.rating-section {
+  width: 100% !important; /* Ensure it takes the full width */
+  margin-left: 0 !important; /* Remove default Bootstrap margins */
+  margin-right: 0 !important; /* Remove default Bootstrap margins */
+  margin-top: -90px !important;
+}
+/* Service Start */
+.our-top-content{
+  display: inline-block !important;
+  width: 100% !important;
+  padding: 0 !important;
+  padding-left: 40px !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-top: -50px !important;
+  margin-left: -10px !important;
+}
+.our-top-content h1{
+  margin-left: 0;
+  width: 300px;
+  font-size: 2.6rem !important;
+}
+.our-top-content p{
+  margin:20px 0;
+  /* background-color: #000; */
+  width: 300px;
+  font-size: 1.2rem;
+}
+.our-top-content .text-start a{
+  font-size: 10px !important;
+  text-align: center !important;
+  padding: 10px 40px !important;
+}
+.our-top-content .btn{
+  display: row !important;
+  text-align: center !important;
+  padding: 10px 20px !important;
+  font-size: 10px;
+}
+.our-top-content .btn .our-btn-primary{
+  margin-left: -20px !important;
+  text-align: center ;
+  width: 100px !important;
+  font-size: 10px !important;
+}
+
+/* Benefit Starts */
+
+.benefit-2 {
+  position: absolute;
+  /* Assuming float-2's position - adjust these values based on your design */
+  top: 40%; /* Example: Adjust to match float-2's vertical position */
+  right: 25% !important; /* Example: Adjust to match float-2's horizontal position */
+  z-index: 10; /* Ensure it appears above other elements if needed */
+}
+/* Benefit ends */
+
+/* Pricing Starts */
+.free-card {
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 auto;
+  /* min-height: 644px;
+  max-width: 370px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  background-color: white; */
+}
+.gradient-container-btm {
+  height: 4000px !important; /* Full viewport height, adjust as needed */
+}
+.gradient-2-btm::after {
+  content: '';
+  position: absolute;
+  right: 0; /* Position it on the right side */
+  top: 50%; 
+  transform: translateY(-50%); /* Center vertically */
+  width: 400px; /* Square width */
+  height: 5200px !important; /* Square height */
+  background: rgba(84, 190, 150, 0.3); /* Slightly stronger #54BE96 */
+  border-top-left-radius: 1200%; /* Round the top-left corner */
+  border-bottom-left-radius: 1200%; /* Round the bottom-left corner */
+  border-top-right-radius: 0; /* Keep top-right corner sharp */
+  border-bottom-right-radius: 0; /* Keep bottom-right corner sharp */
+  filter: blur(120px); /* Soften the edges slightly */
+}
+
+
+
+
+
+
+
+
+
+
+.btn.our-btn-primary {
+  background: #54BD95 !important;
+  color: #F8F8FA !important;
+  border-radius: 50px !important;
+  font-weight: 400;
+  transition: 0.5s;
+  border: none !important;
+}
+.btn.our-btn-primary:hover {
+  border: 2px solid #54BD95 !important;
+  border-radius: 50px;
+  color: #54BD95 !important;
+  background-color: transparent;
+}
+
+.avatar img {
+  width: 34px !important;
+  height: 34px !important;
+}
+.play-btn {
+  width: 34px !important;
+  height: 34px !important;
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+footer .copy-right{
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+  color: #FFFFFF;
+}
+.email-input-container {
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.navbar-light .navbar-brand h1 {
+  margin-top: 10px !important;
+}
+}
+/* Parent container to set the overall size and position */
+.gradient-container-btm {
+  width: 100%;
+  height: 330vh; /* Full viewport height, adjust as needed */
+  position: relative;
+  overflow: hidden; /* To ensure the child doesn't overflow */
+}
+
+/* Child div for the gradient and square effect */
+.gradient-2-btm {
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Position it behind the content */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind the content */
+}
+
+/* Adding a square with rounded top-left and bottom-left corners */
+.gradient-2-btm::after {
+  content: '';
+  position: absolute;
+  right: 0; /* Position it on the right side */
+  top: 50%; 
+  transform: translateY(-50%); /* Center vertically */
+  width: 400px; /* Square width */
+  height: 2200px; /* Square height */
+  background: rgba(84, 190, 150, 0.3); /* Slightly stronger #54BE96 */
+  border-top-left-radius: 1200%; /* Round the top-left corner */
+  border-bottom-left-radius: 1200%; /* Round the bottom-left corner */
+  border-top-right-radius: 0; /* Keep top-right corner sharp */
+  border-bottom-right-radius: 0; /* Keep bottom-right corner sharp */
+  filter: blur(120px); /* Soften the edges slightly */
+}
+/*** Gradient Container ***/
+.gradient-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.gradient-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a9d1c2 0%, transparent 30%);
+  z-index: 1;
+}
+
+.gradient-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 50%, #a9d1c2 100%);
+  z-index: 2;
+}
+
+.hero-header .hero-content p {
+  color: #000000;
+  font-size: 17px !important;
+  font-weight: 100 !important;
+  width: 460px;
+  height: 90px;
+  line-height: 25px;
+  margin: 5% 0 !important;
+}
+
+.hero-header .btn-outline-primary {
+  display: flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Vertically center the icon and text */
+  justify-content: center; /* Horizontally center the content */
+  gap: 8px;
+  font-weight: 200;
+  border: none;
+  transition: 0s !important;
+  color: #000000;
+}
+
+.hero-header .btn-outline-primary i {
+  font-weight: 100;
+  font-size: 1.6em;
+  line-height: 1;
+}
+
+.hero-header .btn-outline-primary:hover {
+  border: 2px solid #54BD95 !important;
+  border-radius: 50px;
+  background-color: transparent;
+}
+
+/*** Underline Text ***/
+.underline-text {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-text::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; /* Position the line further down to account for multiple lines */
+  left: 0;
+  width: 350px; /* Fixed width for the curved line */
+  height: 26px; /* Height for the SVG */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,15 Q50,0 100,15" fill="none" stroke="%2354BD95" stroke-width="4"/></svg>');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/*** Right Side Styling ***/
+.col-lg-6.position-relative {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*** Background Green Shape ***/
+.bg-shape {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  background-color: #a9d1c2;
+  border-radius: 20px;
+  z-index: 3;
+}
+
+/*** Person Image ***/
+.person-img {
+  position: relative;
+  width: 60%;
+  z-index: 4;
+}
+
+/*** Credit Card Image ***/
+.credit-card-img {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 146px;
+  z-index: 5;
+}
+
+/*** Floating Elements ***/
+.float-1 {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  width: 40px;
+  z-index: 6;
+}
+
+.float-2 {
+  position: absolute;
+  top: 5%;
+  right: 16%;
+  width: 50px;
+  z-index: 6;
+}
+
+.float-3 {
+  position: absolute;
+  bottom: -6%;
+  right: 28%;
+  width: 40px;
+  z-index: 6;
+}
+
+.float-4 {
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+  width: 30px;
+  z-index: 6;
+}
+
+/*** Transaction Cards ***/
+.transaction-card {
+  position: absolute;
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  z-index: 7;
+}
+
+.transaction-1 {
+  width: 262px;
+  top: 10%;
+  left: -5%;
+}
+
+.transaction-2 {
+  width: 138px;
+  height: 70px;
+  bottom: 20%;
+  left: 10%;
+}
+
+/*** Text Container ***/
+.transaction-text .payment {
+  display: flex;
+}
+
+.transaction-text .payment span {
+  font-weight: 300;
+}
+
+.transaction-text .payment img {
+  border: none;
+  top: 0;
+  padding: 8px 20px;
+}
+
+.transaction-text {
+  border-bottom: 2px solid #EEEEEE;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.transaction-card p {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.transaction-card span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.send-btn {
+  background-color: #a9d1c2;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-btn:hover {
+  background-color: #8cc1a9;
+}
+
+/*** Collab Section ***/
+.collab {
+  padding: 50px 0; /* Add some padding for spacing */
+  width: 100%; /* Ensure it takes the full width */
+}
+
+/*** Center the heading ***/
+.collab h3 {
+  font-weight: 900;
+  color: #000000;
+  z-index: 10;
+  text-align: center; /* Center the heading text */
+  margin-bottom: 30px; /* Add some space below the heading */
+}
+
+/*** Center the row of client logos ***/
+.collab .row {
+  display: flex;
+  justify-content: center; /* Center the columns horizontally */
+  flex-wrap: wrap; /* Ensure the columns wrap properly (already handled by Bootstrap) */
+  width: 100%; /* Ensure the row takes the full width */
+  margin-left: 0; /* Remove default Bootstrap margins */
+  margin-right: 0; /* Remove default Bootstrap margins */
+}
+
+/*** Client Logo Styling ***/
+.client-logo {
+  z-index: 6;
+  display: flex;
+  justify-content: center; /* Center the image within each column */
+  align-items: center; /* Vertically center the image */
+}
+
+/*** Ensure images are responsive ***/
+.client-logo img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 60px; /* Limit the height of logos for consistency */
+}
+
+/*** Rating Section ***/
+.rating-section {
+  width: 100%; /* Ensure it takes the full width */
+  margin-left: 0; /* Remove default Bootstrap margins */
+  margin-right: 0; /* Remove default Bootstrap margins */
+}
+
+.rating-section .wow .icon {
+  height: 50px;
+  width: 50px;
+  box-shadow: 2px 5px 10px #8787876e;
+  background-color: #fff;
+}
+
+.rating-section .icon .three-icons {
+  margin: 10px 10px;
+}
+
+/*** Service Section ***/
+.service {
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.custom-row {
+  position: relative; /* Allow absolute positioning of the middle card */
+  justify-content: space-between !important; /* Push first card to the left and last card to the right */
+  padding-left: 0 !important; /* Remove left padding to align first card with container edge */
+  padding-right: 0 !important; /* Remove right padding to align last card with container edge */
+  margin-left: 0 !important; /* Remove default Bootstrap margins */
+  margin-right: 0 !important; /* Remove default Bootstrap margins */
+  width: 100%; /* Ensure the row takes the full width */
+}
+
+.service-item {
+  background-color: #fff; /* Ensure a white background for the card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  width: 270px; /* Match the card width to the image width */
+  margin: 0; /* Remove auto margin to align with the edges */
+}
+
+.service-image {
+  margin-top: -20px;
+  margin-left: -20px;
+  width: 100%; /* Ensure the image container takes the full width of the card */
+  text-align: center; /* Center the image horizontally */
+  margin-bottom: 20px; /* Add space between the image and the text */
+}
+
+.service-image img {
+  width: 260px; /* Fixed width as specified */
+  object-fit: contain; /* Ensure the image fits without stretching */
+}
+
+.service .service-item {
+  box-shadow: 0 0 45px rgba(0, 0, 0, 0.1);
+}
+
+.service .service-item,
+.service .service-item .service-icon,
+.service .service-item a {
+  transition: 0.5s;
+}
+
+.service .service-item:hover {
+  background: rgba(16, 242, 118, 0.09);
+  border: 1px;
+}
+
+.service .service-item:hover .service-icon,
+.service .service-item:hover a {
+  background: var(--bs-white) !important;
+}
+
+.service .service-item:hover a:hover {
+  background: var(--bs-primary) !important;
+  color: var(--bs-white);
+}
+/* Service section end */
+/* benefit Section Starts */
+
+.benefit-profile{
+  top: 36px;
+  left: -10px;
+  position: absolute;
+  background-color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  z-index: 7;
+}
+.benefit-profile .details{
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center ;
+}
+.benefit-profile .details span{
+  font-weight: 400;
+  font-size: 18px;
+  color: #000000;
+}
+
+.benefit-profile .details .profile{
+  height: 58px; 
+  width: 58px;
+}
+.benefit-2 {
+  position: absolute;
+  /* Assuming float-2's position - adjust these values based on your design */
+  top: 40%; /* Example: Adjust to match float-2's vertical position */
+  right: 25%; /* Example: Adjust to match float-2's horizontal position */
+  z-index: 10; /* Ensure it appears above other elements if needed */
+}
+.benefit-3{
+  top: 90%;
+  left: -10px;
+  position: absolute;
+ 
+  padding: 12px 20px;
+  border-radius: 10px;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  z-index: 7;
+}
+.message {
+    display: flex; /* Make it a flex container */
+    flex-direction: row; /* Align children (img and p) in a row */
+    align-items: center; /* Vertically center the image and text */
+    justify-content: center; /* Horizontally center the image and text */
+    gap: 10px; /* Add some space between the image and text */
+    
+    /* Center the entire message div within its parent */
+    margin: 0 auto; /* Center horizontally if the parent has a defined width */
+    width: fit-content; /* Ensure the div only takes the width of its content */
+    padding: 20px; /* Optional: Add some padding for spacing */
+    background-color: rgba(255, 255, 255, 0.9); /* Optional: Add a background for visibility */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Optional: Style the image and text inside */
+.message img {
+    width: 24px; /* Adjust the image size as needed */
+    height: 24px;
+}
+
+.message p {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size as needed */
+    color: #333; /* Dark color for readability */
+}
+/* Style the unordered list */
+.benefit-points {
+  list-style: none; /* Remove default bullets */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  margin-top: 80px;
+  
+  max-width: 400px; /* Optional: Control the width of the list */
+}
+
+/* Style each list item */
+.benefit-text {
+  
+  display: flex; /* Use flexbox to align icon and text */
+  align-items: center; /* Vertically center the icon and text */
+  gap: 10px; /* Space between the icon and text */
+  margin-bottom: 15px; /* Space between each list item */
+}
+
+/* Style the tick icon */
+.tick-icon {
+  width: 20px; /* Adjust icon size */
+  height: 20px;
+}
+
+/* Style the text in the span */
+.bullets {
+  font-size: 18px; /* Adjust font size */
+  color: #000; /* Dark color for readability */
+  line-height: 2; /* Improve readability */
+}
+/*** Features Section ***/
+.feature {
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.feature .feature-img {
+  background: var(--bs-light);
+  border-radius: 58% 42% 21% 79% / 30% 29% 71% 70%;
+}
+/*--------------------------------------------------------------
+# Pricing Section
+--------------------------------------------------------------*/
+/* Pricing Section */
+.container-fluid.price {
+  position: relative;
+  z-index: 2; /* Above the gradient-2-btm (z-index: 1) */
+}
+
+.price-head h1 {
+  margin: 0 auto;
+  color: #000;
+  max-width: 492px;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.price-head p {
+  font-weight: 500;
+  color: #A6A6A6;
+}
+
+/* Container for the toggle button */
+.toggle-container {
+  margin-top: 50px !important;
+  margin-bottom: 70px !important;
+  display: flex;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-width: 340px; /* Adjusted to fit the new widths (160px + 160px + padding) */
+  min-height: 70px;
+  padding: 8px;
+  background-color: #fff;
+  margin: 0 auto; /* Center the toggle */
+}
+
+/* Style for each toggle option */
+.toggle-option {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 160px; /* Set width for both options for consistency */
+  text-align: center; /* Center the text */
+}
+
+/* Inactive state (Bill Monthly) */
+.toggle-option.inactive {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Active state (Bill Yearly) */
+.toggle-option.active {
+  border-radius: 15px;
+  background-color: #54BE96;
+  color: #fff;
+  width: 160px; /* Explicitly set width to 160px */
+}
+
+/* Hover effect for inactive state */
+.toggle-option.inactive:hover {
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+/* Price Card Styling (Pro Card) */
+.price-card {
+  min-height: 660px;
+  max-width: 374px;
+  margin: 20px auto;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #54BE96 0%, #3d8b6d 100%);
+}
+
+.price-header {
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.price-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.price-header p.tagline {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  opacity: 0.9;
+}
+
+.price-header .price {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price-header .discount {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.price-body {
+  min-height: 350px;
+  background-color: white;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+.price-body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+}
+
+.price-body ul li img {
+  margin: 0;
+  padding: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.price-body li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.price-body .btn {
+  color: white !important;
+  font-weight: 400;
+  background-color: #54BE96;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.price-body .btn:hover {
+  background-color: #3d8b6d;
+}
+
+/* Free Card Styling */
+.free-card {
+  min-height: 644px;
+  max-width: 370px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  background-color: white;
+}
+
+.free-header {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.free-header h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.free-header p.tagline {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.free-header .price {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.free-body {
+  line-height: 2;
+  margin: 15px;
+  border-radius: 10px;
+  min-height: 380px;
+  background-color: #F9FAFB;
+  padding: 20px;
+}
+
+.free-body ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 35px;
+}
+
+.free-body ul li img {
+  margin: 0;
+  padding: 0;
+  height: 18px;
+  width: 18px;
+}
+
+.free-body li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.free-body .btn {
+  color: #54BE96 !important;
+  font-weight: 400;
+  background-color: white;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.2);
+  border: none;
+  font-size: 1rem;
+  padding: 10px 0;
+  width: 100%;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.free-body .btn:hover {
+  background-color: #3d8b6d;
+  color: white !important;
+}
+
+@media (min-width: 992px) {
+  .price .featured .price-card {
+      transform: scale(1.02, 1.1);
+  }
+}
+
+
+/* Main Section */
+.main-section {
+  background-color: #161C28;
+  padding: 50px 0;
+}
+
+.main-section h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.main-section p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+}
+
+.main-section .mt-2 {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+.quote-icon {
+  font-size: 9rem;
+  color: white;
+}
+
+.testimonial {
+  background-color: #161C28 !important;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: -50px;
+}
+
+.avatar img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.play-btn {
+  width: 66px;
+  height: 66px;
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* Form Section */
+.form-section {
+  background-color: #222938;
+  padding: 60px;
+  border-radius: 10px;
+}
+
+.form-section h6 {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-section img {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section input,
+.form-section textarea {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: #000;
+  padding: 10px;
+}
+
+.form-section .main-btn {
+  background-color: #54BD95;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form-section .st-trial {
+  text-align: right;
+}
+
+/* Footer */
+footer {
+  background-color: #161C28 !important;
+  font-family: Arial, sans-serif;
+}
+
+footer h5, footer h6 {
+  font-weight: bold;
+  color: white;
+}
+
+footer p, footer a {
+  font-size: 14px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+footer .text-success {
+  color: #54BD95 !important;
+  font-size: 2rem;
+}
+
+footer .container .row .col-md-3 {
+  line-height: 3;
+}
+
+footer .text-white {
+  color: #A6A6A6 !important;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+footer .terms{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  color: #FFFFFF;
+}
+
+/* Adjust bullet points alignment */
+.main-bullets {
+  display: flex;
+  justify-content: flex-end; /* Align bullet points to the right */
+}
+
+.email-input-container {
+  line-height: 2;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.email-input {
+  background-color: #161C28;
+  border: 2px solid #A6A6A6;
+  border-radius: 50px;
+  padding: 10px 60px 10px 20px;
+  color: white;
+  width: 100%;
+}
+
+.email-input::placeholder {
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #54BD95;
+}
+
+.submit-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #54BD95;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.submit-btn::after {
+  content: "→";
+  color: white;
+  font-size: 1.2rem;
+}
+
+
+/*** Blog Section ***/
+.blog {
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.blog .blog-item {
+  border-radius: 10px;
+}
+
+.blog .blog-item .blog-img {
+  position: relative;
+  overflow: hidden;
+  background: rgba(102, 16, 242, 0.2);
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.blog .blog-item .blog-img .blog-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: rgba(102, 16, 242, 0.2);
+  color: var(--bs-white) !important;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+
+.blog .blog-item .blog-img:hover .blog-info {
+  background: rgba(0, 0, 0, .4);
+}
+
+.blog .blog-item .blog-content {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.blog .blog-item .blog-img img {
+  transition: 0.5s;
+}
+
+.blog .blog-item .blog-img:hover img {
+  transform: scale(1.3);
+}
+
+
+
+/*** Footer Section ***/
+.footer {
+  background: linear-gradient(rgba(102, 16, 242, 0.05), rgba(102, 16, 242, 0.05));
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.footer .footer-item a {
+  line-height: 35px;
+  color: var(--bs-dark);
+  transition: 0.5s;
+}
+
+.footer .footer-item p {
+  line-height: 35px;
+}
+
+.footer .footer-item a:hover {
+  letter-spacing: 2px;
+  color: var(--bs-primary);
+}
+
+/*** Copyright Section ***/
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bs-dark) !important;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+/*** Spinner ***/
+#spinner {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .5s ease-out, visibility 0s linear .5s;
+  z-index: 99999;
+}
+
+#spinner.show {
+  transition: opacity .5s ease-out, visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
+}
+
+/*** Back to Top ***/
+.back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  z-index: 99;
+}
+
+/*** Button ***/
+.btn {
+  font-weight: 600;
+  transition: .5s;
+}
+
+.btn-square {
+  width: 32px;
+  height: 32px;
+}
+
+.btn-sm-square {
+  width: 34px;
+  height: 34px;
+}
+
+.btn-md-square {
+  width: 44px;
+  height: 44px;
+}
+
+.btn-lg-square {
+  width: 56px;
+  height: 56px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-md-square,
+.btn-lg-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: normal;
+  border-radius: 50%;
+}
+.btn.our-btn-primary {
+  background: #54BD95 !important;
+  color: #F8F8FA !important;
+  border-radius: 50px !important;
+  font-weight: 400;
+  transition: 0.5s;
+  border: none !important;
+}
+.btn.btn-primary {
+  background: #54BD95 !important;
+  color: #F8F8FA !important;
+  border-radius: 50px !important;
+  font-weight: 400;
+  transition: 0.5s;
+  border: none !important;
+}
+
+.btn.btn-primary:hover {
+  background: none !important;
+  color: #A6A6A6 !important;
+  border: 1px solid #54BD95 !important;
+}
+
+.btn.btn-light {
+  background: none !important;
+  color: #A6A6A6 !important;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+.btn.btn-light:hover {
+  background: none !important;
+  color: none !important;
+}
+
+/*** Animations ***/
+.RotateMoveLeft {
+  position: relative;
+  animation: RotateMoveLeft 10s linear infinite;
+}
+
+.RotateMoveRight {
+  position: relative;
+  animation: RotateMoveLeft 10s linear infinite;
+}
+
+@keyframes RotateMoveLeft {
+  0%   {left: 0px;}
+  50%   {left: 40px;}
+  100%  {left: 0px;}
+}
+
+@keyframes RotateMoveRight {
+  0%   {right: 0px;}
+  50%   {right: 40px;}
+  100%  {right: 0px;}
+}
+
+/*** Navbar ***/
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 25px;
+  padding: 35px 0;
+  color: #A6A6A6 !important;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-nav .nav-link {
+  padding: 20px 0;
+  color: var(--dark) !important;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #000000 !important;
+}
+
+.navbar-light .navbar-brand img {
+  max-height: 50px;
+  transition: .5s;
+}
+
+.sticky-top.navbar-light .navbar-brand img {
+  max-height: 45px;
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+@media (min-width: 1200px) {
+  .navbar .nav-item .dropdown-menu {
+      display: block;
+      visibility: hidden;
+      top: 100%;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+      border: 0;
+      border-radius: 10px;
+      transition: .5s;
+      opacity: 0;
+  }
+}
+
+.dropdown .dropdown-menu a:hover {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+.navbar .nav-item:hover .dropdown-menu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  background: var(--bs-light) !important;
+  transition: .5s;
+  opacity: 1;
+}
+
+.collapse.navbar-collapse {
+  transition: 0.5s;
+}
+
+/*** Single Page Hero Header ***/
+.bg-breadcrumb {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(102, 16, 242, 0.05), rgba(102, 16, 242, 0.05));
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 150px 0 60px 0;
+  margin-bottom: 6rem;
+  transition: 0.5s;
+  width: 100%; /* Ensure it takes the full width */
+}
+
+.bg-breadcrumb::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  border: 80px solid rgba(247, 71, 128, 0.05);
+  background: transparent;
+  animation: RotateMoveSingle 5s linear infinite;
+  z-index: -1;
+}
+
+.bg-breadcrumb .breadcrumb {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes RotateMoveSingle {
+  0% {
+      -webkit-transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+      transform: rotateZ(0deg) rotate(0deg) translate3d(0, 1%, 0) rotateZ(0deg);
+  }
+  100% {
+      -webkit-transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+      transform: rotateZ(360deg) rotate(360deg) translate3d(0, 1%, 0) rotateZ(-360deg);
+  }
+  0% {bottom: 0px;}
+  50% {left: -10px;}
+  75% {bottom: 10%;}
+  100% {bottom: 0px;}
+}
+
+.bg-breadcrumb::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 300px;
+  border: 80px solid rgba(247, 71, 128, 0.04);
+  background: transparent;
+  animation: RotateMoveSingle 5s linear infinite;
+  z-index: -1;
+}
+
+.breadcrumb-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.breadcrumb-animation li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(102, 16, 242, 0.07);
+  animation: animate 25s linear infinite;
+  bottom: -150px;
+}
+
+.breadcrumb-animation li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.breadcrumb-animation li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.breadcrumb-animation li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.breadcrumb-animation li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.breadcrumb-animation li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.breadcrumb-animation li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.breadcrumb-animation li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.breadcrumb-animation li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.breadcrumb-animation li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.breadcrumb-animation li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes animate {
+  0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+/*** Responsive Adjustments ***/
+@media (max-width: 992px) {
+  .bg-breadcrumb {
+      padding-top: 100px !important;
+  }
+
+  .navbar-light {
+      position: relative;
+      background: var(--bs-white) !important;
+      padding: 0 20px 20px 20px !important;
+  }
+
+  .navbar-light .navbar-collapse {
+      margin-top: 15px;
+      border-top: 1px solid #DDDDDD;
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .sticky-top.navbar-light .navbar-nav .nav-link {
+      padding: 10px 0;
+      margin-left: 0;
+      color: var(--bs-dark) !important;
+  }
+
+ 
+
+  
+}
+
+@media (min-width: 992px) {
+  .navbar-light {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: transparent !important;
+      z-index: 999;
+  }
+
+  .sticky-top.navbar-light {
+      position: fixed;
+      background: var(--bs-light) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  .col-lg-6.position-relative {
+      margin-top: 30px;
+  }
+
+  .bg-shape {
+      width: 80%;
+      height: 60%;
+  }
+
+  .person-img {
+      width: 70%;
+  }
+
+  .credit-card-img {
+      width: 40%;
+      bottom: 5%;
+      right: 5%;
+  }
+
+  .float-1, .float-2, .float-3, .float-4 {
+      width: 25px;
+  }
+
+  .transaction-card {
+      padding: 8px 15px;
+  }
+
+  .transaction-card span {
+      font-size: 16px;
+  }
+
+  .send-btn {
+      padding: 4px 10px;
+      font-size: 12px;
+  }
+
+  .underline-text::after {
+      bottom: -15px; /* Adjust position for smaller screens */
+      width: 120px; /* Smaller width for the line */
+      height: 15px; /* Smaller height for the SVG */
+  }
+
+  .collab {
+      padding: 30px 0; /* Reduce padding on smaller screens */
+  }
+
+  .collab h3 {
+      font-size: 1.5rem; /* Smaller font size on mobile */
+      margin-bottom: 20px; /* Reduce space below heading */
+  }
+
+  .client-logo {
+      margin-bottom: 20px; /* Add space between logos on smaller screens */
+  }
+
+  .client-logo img {
+      max-height: 50px; /* Smaller logo height on mobile */
+  }
+
+  .custom-row {
+      justify-content: center !important; /* Center cards on smaller screens */
+  }
+
+  .custom-row .col-md-6.col-lg-4.col-xl-3:nth-child(2) {
+      position: static; /* Remove absolute positioning on smaller screens */
+      transform: none; /* Remove transform */
+  }
+
+  .col-md-6.col-lg-4.col-xl-3 {
+      display: flex;
+      justify-content: center; /* Center the card within its column */
+  }
+
+  .service-item {
+      width: 300px; /* Smaller card width on mobile */
+  }
+
+  .service-image img {
+      width: 300px; /* Smaller image on mobile */
+      height: 350px; /* Smaller height */
+  }
+
+  .service-content h4 {
+      font-size: 1.25rem; /* Smaller heading on mobile */
+  }
+
+  .service-content p {
+      font-size: 0.9rem; /* Smaller text on mobile */
+  }
+
+  .testimonial .testimonial-carousel.owl-carousel {
+      padding: 0;
+  }
+
+  .testimonial .testimonial-carousel .owl-nav .owl-prev {
+      margin-top: -250px;
+      margin-left: -15px;
+  }
+
+  .testimonial .testimonial-carousel .owl-nav .owl-next {
+      margin-top: -250px;
+      margin-right: -15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-shape {
+      width: 90%;
+      height: 50%;
+  }
+
+  .person-img {
+      width: 80%;
+  }
+
+  .credit-card-img {
+      width: 50%;
+  }
+
+  .float-1, .float-2, .float-3, .float-4 {
+      width: 20px;
+  }
+
+  .transaction-1, .transaction-2 {
+      padding: 6px 10px;
+  }
+
+  .transaction-card span {
+      font-size: 14px;
+  }
+
+  .underline-text::after {
+      bottom: -10px; /* Further adjust position */
+      width: 100px; /* Even smaller width */
+      height: 10px; /* Even smaller height */
+  }
+
+  .collab {
+      padding: 20px 0; /* Further reduce padding */
+  }
+
+  .collab h3 {
+      font-size: 1.25rem; /* Even smaller font size on smaller screens */
+      margin-bottom: 15px; /* Further reduce space */
+  }
+
+  .client-logo {
+      margin-bottom: 15px; /* Adjust spacing */
+  }
+
+  .client-logo img {
+      max-height: 40px; /* Even smaller logo height */
+  }
+
+  .service-item {
+      width: 100%; /* Full width on very small screens */
+      max-width: 300px; /* Limit the width to avoid stretching */
+  }
+
+  .service-image img {
+      margin-left: 20px;
+      width: 250px; /* Even smaller image */
+      height: 300px; /* Even smaller height */
+  }
+
+  .service-content h4 {
+      font-size: 1.1rem; /* Even smaller heading */
+  }
+
+  .service-content p {
+      font-size: 0.85rem; /* Even smaller text */
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonial .testimonial-carousel .testimonial-item .testimonial-inner p.fs-7 {
+      font-size: 20px;
+  }
+}
